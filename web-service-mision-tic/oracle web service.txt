@@ -1,0 +1,37 @@
+-->crear base de datos FARM
+create table farm
+(
+    ID NUMBER NOT NULL,
+    ADDRESS VARCHAR(100) NOT NULL,
+    EXENSION INTEGER NOT NULL,
+    CATEGORY_ID INTEGER NOT NULL,
+    NAME VARCHAR(200) NOT NULL
+)
+------------------------------------------------------------------------------------
+>FORMA DE PEDIRLE DATOS AL USUARIO POR PL/SQL
+
+BEGIN
+    INSERT INTO FARM(ID, ADDRESS, EXENSION, CATEGORY_ID,NAME) 
+    --insertar datos en la tabla por parte del usuario
+    VALUES(:ID,:ADDRESS,:EXENSION,:CATEGORY_ID,:NAME);
+end;
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+--FORMA DE ACTUALIZAR DATOS DE LA TABLA 
+BEGIN
+    UPDATE FARM 
+    SET ADDRESS =:address,
+        EXENSION =:exension,
+        CATEGORY_ID =:category_id,
+        NAME =:name
+    WHERE ID = :id;
+end;
+SELECT * FROM FARM;
+
+---------------------------------------------------------------------------------------------------------------------------------------
+--FORMA DE BORRAR DATOS DE LA TABLA 
+BEGIN
+    DELETE FROM FARM WHERE ID=:id;
+end;
+SELECT * FROM FARM;
