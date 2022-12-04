@@ -1,0 +1,4 @@
+aplicacion de invaentarios reto 1
+Una tienda vende diferentes productos, usualmente frutas, dulces y algunos tipos de carne. Con el propósito de mejorar el control sobre las ventas y 
+el inventario de la tienda, el gerente decide construir una aplicación que le permita almacenar la información de los productos y realizar algunos 
+cálculos sobre los datos.
